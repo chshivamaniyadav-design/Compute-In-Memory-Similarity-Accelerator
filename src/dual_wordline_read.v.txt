@@ -1,0 +1,39 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 07.01.2026 21:24:36
+// Design Name: 
+// Module Name: dual_wordline_read
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module dual_wordline_read (
+    input  wire clk,
+    input  wire wl1,
+    input  wire wl2,
+    input  wire din1,
+    input  wire din2,
+    output wire q1,
+    output wire q2
+);
+
+sram_cell C1 (clk, wl1, din1, q1);
+sram_cell C2 (clk, wl2, din2, q2);
+
+endmodule
+
+
+
