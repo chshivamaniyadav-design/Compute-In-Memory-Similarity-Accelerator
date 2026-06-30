@@ -1,0 +1,35 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12.03.2026 09:02:52
+// Design Name: 
+// Module Name: result_gate
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+
+module result_gate(
+
+input match,
+input [127:0] result_in,
+
+output [127:0] result_out
+
+);
+
+assign result_out = match ? result_in : 128'b0;
+
+endmodule
